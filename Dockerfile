@@ -3,6 +3,6 @@ WORKDIR /app
 ENV PORT=8080
 EXPOSE $PORT
 COPY package*.json ./
-npm ci --production
+RUN npm ci --production
 COPY . .
 CMD ["npm", "start"]
